@@ -1,9 +1,12 @@
 package com.example;
 
-import java.io.*;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
@@ -11,6 +14,6 @@ public class HelloServlet extends HttpServlet {
             throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.println("<h1>Merhaba Java Servlet'ten!</h1>");
+        out.println("<h1>Merhaba Azure’dan otomatik deploy!</h1>");
     }
 }
